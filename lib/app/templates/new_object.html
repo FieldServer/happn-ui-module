@@ -1,0 +1,48 @@
+<div class="modal-header">
+            <h3>New object</h3>
+</div>
+<div class="modal-body">
+ <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="controlName" class="col-sm-2 control-label">Path</label>
+    <div class="col-sm-10">
+      <input class="form-control" placeholder="Path" ng-model="data.path"></input>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="controlProject" class="col-sm-2 control-label">Template</label>
+    <div class="col-sm-10">
+     <select
+       class="form-control"
+       required=true
+       ng-options="template as template.path for template in templates"
+       ng-model="settings.template"
+       ng-change="templateSelected()"
+       >
+	</select>
+    </div>
+  </div>
+   <div class="form-group" ng-show="settings.template.path == 'None'">
+    <label for="controlProject" class="col-sm-2 control-label">Type</label>
+    <div class="col-sm-10">
+     <select
+       class="form-control"
+       ng-options="typ as typ for typ in settings.types"
+       ng-model="settings.typ"
+       >
+    </select>
+    </div>
+     </div>
+     <div class="form-group" ng-show="settings.template.path == 'None'">
+    <label for="controlProject" class="col-sm-2 control-label">JSON</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" rows="3" ng-model="settings.json"></textarea>
+    </div>
+  </div>
+ </form>
+</div>
+ <div class="modal-footer">
+ 	 <div style="display:{{message.display}}" class="alert {{message.type}}">{{message.message}}</div>
+ 	 <i class="icon-button-large glyphicon glyphicon-ok" ng-click="ok()"></i>
+ 	 <i class="icon-button-large glyphicon glyphicon-remove" ng-click="cancel()"></i>
+ </div>
