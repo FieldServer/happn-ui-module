@@ -3,7 +3,8 @@ var happn = require('@smc/happn')
 var service = happn.service;
 var happn_client = happn.client;
 var async = require('async');
-var HappnUI = require('../lib/service');
+var UIService = require('../lib/service');
+var HappnUI = new UIService();
 
 describe('e2e test', function() {
 

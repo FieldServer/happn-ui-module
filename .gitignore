@@ -1,5 +1,5 @@
 node_modules
-bower_components
+lib/app/lib/components/*
 .idea
 npm-debug.log
 coverage
