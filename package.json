@@ -1,7 +1,7 @@
 {
   "name": "happn-ui-module",
   "description": "Happn ui component",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "main": "./lib/service",
   "keywords": [],
   "dependencies": {
